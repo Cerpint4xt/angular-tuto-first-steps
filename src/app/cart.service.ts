@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Product } from './products';
 import { Injectable } from '@angular/core';
 
@@ -19,5 +20,7 @@ export class CartService {
     return this.items;
   }
 
-  constructor() { }
+  constructor(
+    private http: HttpClient
+  ) { }
 }
